@@ -1,0 +1,2 @@
+C:\Users\11739\Desktop\VS2019\Test\Debug\Test.exe
+C:\Users\11739\Desktop\VS2019\Test\Debug\Test.pdb
