@@ -1,8 +1,8 @@
 ﻿  Test.cpp
-C:\Users\11739\Desktop\Github\graph_2020_11_16\Test\Test.cpp(8,2): warning C4091: “typedef ”: 没有声明变量时忽略“node”的左侧
-C:\Users\11739\Desktop\Github\graph_2020_11_16\Test\Test.cpp(15,2): warning C4091: “typedef ”: 没有声明变量时忽略“vertex”的左侧
-C:\Users\11739\Desktop\Github\graph_2020_11_16\Test\Test.cpp(21,2): warning C4091: “typedef ”: 没有声明变量时忽略“graph”的左侧
-C:\Users\11739\Desktop\Github\graph_2020_11_16\Test\Test.cpp(28,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\11739\Desktop\Github\graph_2020_11_16\Test\Test.cpp(38,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\11739\Desktop\Github\graph_2020_11_16\Test\Test.cpp(81,2): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Test.vcxproj -> C:\Users\11739\Desktop\Github\graph_2020_11_16\Test\Debug\Test.exe
+C:\Users\11739\Documents\GitHub\graph\Test\Test.cpp(11,2): warning C4091: “typedef ”: 没有声明变量时忽略“node”的左侧
+C:\Users\11739\Documents\GitHub\graph\Test\Test.cpp(18,2): warning C4091: “typedef ”: 没有声明变量时忽略“vertex”的左侧
+C:\Users\11739\Documents\GitHub\graph\Test\Test.cpp(24,2): warning C4091: “typedef ”: 没有声明变量时忽略“graph”的左侧
+C:\Users\11739\Documents\GitHub\graph\Test\Test.cpp(31,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\11739\Documents\GitHub\graph\Test\Test.cpp(41,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\11739\Documents\GitHub\graph\Test\Test.cpp(84,2): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Test.vcxproj -> C:\Users\11739\Documents\GitHub\graph\Test\Debug\Test.exe

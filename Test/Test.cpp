@@ -1,6 +1,9 @@
 ﻿#include<stdio.h>
 #include<malloc.h>
 #define INT int
+
+INT A = 0, B = 0, a[100] = { 0 }, b[100] = { 0 }, line[100][100] = { 0 }, used[100] = { 0 }, Object[100] = { 0 };
+
 typedef struct node
 {
 	INT n;
@@ -27,13 +30,13 @@ struct graph* creat_graph()
 	INT m, n, a, b;
 	scanf("%d%d", &m, &n);//m个人，n个关系
 	G->numNodes = m, G->numEdges = n;
-	for (int i = 0; i < m; i++)//m个节点初始化
+	for (INT i = 0; i < m; i++)//m个节点初始化
 	{
 		G->a[i].n = i + 1;//a[0]存的节点是1
 		G->a[i].color = 0;
 		G->a[i].head = NULL;
 	}
-	for (int i = 0; i < n; i++)
+	for (INT i = 0; i < n; i++)
 	{
 		scanf("%d%d", &a, &b);//头插法
 		node* NEW_1 = (node*)malloc(sizeof(node));
@@ -52,10 +55,10 @@ struct graph* creat_graph()
 int judge(graph* G)
 {
 	//0无色，1红色，2蓝色
-	int right_color = 0;
+	INT right_color = 0;
 	if (G->numNodes < 2)
 		return 0;
-	for (int i = 0; i < G->numNodes; i++)
+	for (INT i = 0; i < G->numNodes; i++)
 	{
 		if (G->a[i].color == 0)//若无色则给初始点赋色
 			G->a[i].color = 1;
@@ -66,8 +69,8 @@ int judge(graph* G)
 		node* temp = G->a[i].head;
 		while (temp != NULL)
 		{
-			if (G->a[temp->n-1].color == 0|| G->a[temp->n - 1].color == right_color)//减一因为a[i]存的是i+1点
-				G->a[temp->n-1].color = right_color;
+			if (G->a[temp->n - 1].color == 0 || G->a[temp->n - 1].color == right_color)//减一因为a[i]存的是i+1点
+				G->a[temp->n - 1].color = right_color;
 			else
 				return 0;
 			temp = temp->next;
@@ -83,7 +86,51 @@ int main()
 	G = creat_graph();
 	if (judge(G))
 	{
-		printf("Yes\n");
+		//是二分图
+		INT* x = a, * y = b;
+		for (INT i = 0; i < G->numNodes; i++)
+		{
+			if (G->a[i].color == 1)
+			{
+				A++;
+				*x = G->a[i].n;
+				x++;
+			}
+			else
+			{
+				B++;
+				*y = G->a[i].n;
+				y++;
+			}
+		}
+
+		for (INT i = 0; i < A; i++)
+		{
+			node* temp = G->a[a[i]-1].head;
+			printf("%d", temp->n);
+			while (temp != NULL)
+			{
+
+			}
+		}
+
+		for (INT i = 0; i < A; i++)
+		{
+			for (INT k = 0; k < B; k++)
+			{
+				printf("%d ", line[i][k]);
+			}
+			printf("\n");
+		}
+
+		/*
+		for (INT i = 0; i < A; i++)
+			printf("%d ", a[i]);
+		printf("\n");
+		for (INT i = 0; i < B; i++)
+			printf("%d ", b[i]);
+		*/
+		//		printf("Yes\n");
 	}
 	else
 		printf("NO\n");
