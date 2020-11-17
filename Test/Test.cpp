@@ -36,10 +36,15 @@ struct graph* creat_graph()
 	for (int i = 0; i < n; i++)
 	{
 		scanf("%d%d", &a, &b);//头插法
-		node* NEW = (node*)malloc(sizeof(node));
-		NEW->n = b;
-		NEW->next = G->a[a - 1].head;
-		G->a[a - 1].head = NEW;
+		node* NEW_1 = (node*)malloc(sizeof(node));
+		NEW_1->n = b;
+		NEW_1->next = G->a[a - 1].head;
+		G->a[a - 1].head = NEW_1;
+
+		node* NEW_2 = (node*)malloc(sizeof(node));
+		NEW_2->n = a;
+		NEW_2->next = G->a[b - 1].head;
+		G->a[b - 1].head = NEW_2;
 	}
 	return G;
 }
@@ -61,7 +66,7 @@ int judge(graph* G)
 		node* temp = G->a[i].head;
 		while (temp != NULL)
 		{
-			if (G->a[temp->n-1].color == 0)//减一因为a[i]存的是i+1点
+			if (G->a[temp->n-1].color == 0|| G->a[temp->n - 1].color == right_color)//减一因为a[i]存的是i+1点
 				G->a[temp->n-1].color = right_color;
 			else
 				return 0;
@@ -73,6 +78,7 @@ int judge(graph* G)
 
 int main()
 {
+	freopen("C:\\Users\\11739\\Desktop\\test.txt", "r", stdin);
 	graph* G;
 	G = creat_graph();
 	if (judge(G))
@@ -81,4 +87,7 @@ int main()
 	}
 	else
 		printf("NO\n");
+
+
+	fclose(stdin);
 }
