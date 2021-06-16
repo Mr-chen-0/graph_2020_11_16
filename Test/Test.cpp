@@ -52,7 +52,7 @@ struct graph* creat_graph()
 	return G;
 }
 
-int judge(graph* G)
+INT judge(graph* G)
 {
 	//0无色，1红色，2蓝色
 	INT right_color = 0;
